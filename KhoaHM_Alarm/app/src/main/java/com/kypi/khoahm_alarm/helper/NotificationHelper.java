@@ -41,10 +41,12 @@ public class NotificationHelper {
         /* Setup Notification */
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("Hurry")
-                .setContentText("Time's up !!!!!")
+                .setContentTitle("Hurry, Contact me !")
+                .setContentText("Time's up !!!")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setNotificationSilent()
+                .setStyle(new NotificationCompat.BigTextStyle()
+                        .bigText("Hi, I'm KhoaHM, \nIf you have any question, just contact me.\nIf you love this demo, send me an offer :D.\n(Lâu quá roài không code Android, chả nhớ gì :D)"))
                 .setVibrate(null)
 //                .setVibrate(new long[]{1000, 1000, 2000, 2000, 3000, 3000, 4000, 4000})
 //                .setSound(Settings.System.DEFAULT_ALARM_ALERT_URI)
@@ -87,10 +89,9 @@ public class NotificationHelper {
 //                    .build();
 
 
-            String channelId = "some_channel_id";
-            CharSequence channelName = "Some Channel";
+            CharSequence channelName = "Alarm Channel";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel notificationChannel = new NotificationChannel(channelId, channelName, importance);
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, channelName, importance);
             notificationChannel.enableLights(true);
             notificationChannel.setLightColor(Color.RED);
             notificationChannel.setSound(null, null);
