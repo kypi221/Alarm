@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.CountDownActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_margin"
+                android:text="@string/default_number"
+                android:textColor="@color/number_color"
+                android:textSize="@dimen/text_number_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_margin"
+                android:text="@string/colon"
+                android:textColor="@color/number_color"
+                android:textSize="@dimen/text_number_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_margin"
+                android:text="@string/default_number"
+                android:textColor="@color/number_color"
+                android:textSize="@dimen/text_number_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_margin"
+                android:text="@string/colon"
+                android:textColor="@color/number_color"
+                android:textSize="@dimen/text_number_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSeconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_margin"
+                android:text="@string/default_number"
+                android:textColor="@color/number_color"
+                android:textSize="@dimen/text_number_size" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbIsRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lnButtons"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:text="@string/repeat_alarm" />
+
+        <LinearLayout
+            android:id="@+id/lnButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:text="@string/str_ok"
+                android:textSize="18sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/cancel"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

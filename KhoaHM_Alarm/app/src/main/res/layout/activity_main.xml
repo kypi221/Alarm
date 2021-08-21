@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".presentation.MainActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.KhoaHM_Alarm.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.KhoaHM_Alarm.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+        <LinearLayout
+            android:id="@+id/layoutTimePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="@string/hours" />
+
+                <NumberPicker
+                    android:id="@+id/pickerHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="@string/minutes" />
+
+                <NumberPicker
+                    android:id="@+id/pickerMinutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="@string/seconds" />
+
+                <NumberPicker
+                    android:id="@+id/pickerSeconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutTimePicker"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="20dp"
+            android:text="@string/repeat_alarm" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbRepeat"
+            android:layout_centerHorizontal="true"
+            android:text="@string/start" />
+    </RelativeLayout>
+
+</LinearLayout>
